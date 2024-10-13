@@ -21,7 +21,7 @@ namespace NTest
             {
 
                 //loop legger til tegn
-                for (int starten = 0; starten < 9; starten++)
+                for (int legg_til = 0; legg_til < 9; legg_til++)
                 {
                     Console.WriteLine(symbol);
                     //manipulere symbolet for hver runde
@@ -30,7 +30,7 @@ namespace NTest
                 }
 
                 //fjerner tegn
-                for (int slutten = 0; slutten < 10; slutten++)
+                for (int fjern = 0; fjern < 10; fjern++)
                 {
                     Console.WriteLine(symbol);
                     //manipulere symbolet for hver runde

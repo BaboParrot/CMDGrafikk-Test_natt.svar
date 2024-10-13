@@ -12,33 +12,35 @@ namespace NTest
         static void Main(string[] args)
         {
             string symbol = "*";
-            
+
 
             //oppgave:
             //få dette til å gå evig. ved å bruke en eller annen loop. foreach, while, for
 
-
-            //loop legger til tegn
-            for (int i = 0; i < 9; i++)
+            while (true)
             {
-                Console.WriteLine(symbol);
-                //manipulere symbolet for hver runde
-                symbol = symbol + "*";
-                Thread.Sleep(100);
+
+                //loop legger til tegn
+                for (int starten = 0; starten < 9; starten++)
+                {
+                    Console.WriteLine(symbol);
+                    //manipulere symbolet for hver runde
+                    symbol = symbol + "*";
+                    Thread.Sleep(100);
+                }
+
+                //fjerner tegn
+                for (int slutten = 0; slutten < 10; slutten++)
+                {
+                    Console.WriteLine(symbol);
+                    //manipulere symbolet for hver runde
+                    if (symbol.Length > 0)
+                    {
+                        symbol = symbol.Remove(symbol.Length - 1, 1);
+                    }
+                    Thread.Sleep(100);
+                }
             }
-            //fjerner tegn
-            for (int i = 0; i < 10; i++)
-            {
-                Console.WriteLine(symbol);
-                //manipulere symbolet for hver runde
-                symbol = symbol.Remove(symbol.Length-1, 1);
-                Thread.Sleep(100);
-            }
-
-            
-
-
-            Console.ReadLine();
         }
     }
 }
